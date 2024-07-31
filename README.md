@@ -1,10 +1,8 @@
-# Limine C Template
+# WheelOS built with Limine C Template
 
-This repository will demonstrate how to set up a basic x86-64 kernel in C using Limine.
+This repository is the home to WheelOS, which I'm building for fun, experience and learning.
 
-It is recommended to cross reference the contents of this repository with [the Limine Bare Bones](https://osdev.wiki/wiki/Limine_Bare_Bones) OSDev wiki page.
-
-## How to use this?
+## How to use this? (*nix only)
 
 ### Dependencies
 
