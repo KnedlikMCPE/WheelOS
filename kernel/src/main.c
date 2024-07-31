@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "convertors/strings.h"
 #include "limine.h"
 #include <drivers/screen/pixel_console/console.h>
 
@@ -114,7 +115,10 @@ void _start(void) {
     // Fetch the first framebuffer.
     framebuffer = framebuffer_request.response->framebuffers[0];
 
-    putc('A', 20, 20);
+    kputs("Hello, World!\0", 0, 0);
+    kputs("I'm a kernel!\0", 0, 1);
+    kputs("My framebuffer lives at: \0", 0, 2);
+    kputs(int_to_hex_s(0xDEADBEEF), 2, 3);
 
     // We're done, just hang...
     hcf();
